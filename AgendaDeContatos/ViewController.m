@@ -7,21 +7,27 @@
 //
 
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
+#import "Contato.h"
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(IBAction) adiciona {
+    Contato *contato = [Contato new];
+    
+    //[contato setNome:self.nome.text];
+    contato.nome = self.nome.text;
+    contato.endereco = self.endereco.text;
+    contato.email = self.email.text;
+    contato.telefone = self.telefone.text;
+    contato.site = self.site.text;
+    
+    /*NSString *nome = self.nome.text;
+    NSString *endereco = self.endereco.text;
+    NSString *email = self.email.text;
+    NSString *telefone = [self.telefone text];
+    NSString *site = [self.site text];*/
+    
+    NSLog(@"Dados do contato %@ %@ %@ %@ %@", contato.nome, contato.endereco, contato.email, contato.telefone, contato.site);
 }
 
 @end
