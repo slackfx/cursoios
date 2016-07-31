@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ContatoDAO.h"
 
 @interface ViewController : UIViewController
 
@@ -16,7 +17,7 @@
 @property IBOutlet UITextField *telefone;
 @property IBOutlet UITextField *site;
 
-@property NSMutableArray *contatos;
+@property ContatoDAO *contatoDAO;
 
 @end
 
