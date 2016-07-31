@@ -11,7 +11,19 @@
 
 @implementation ViewController
 
--(IBAction) adiciona {
+-(id) initWithCoder: (NSCoder *) aDecoder{
+    self = [super initWithCoder:aDecoder];
+    
+    if(self) {
+        UIBarButtonItem *botao = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action:@selector(adiciona)];
+        self.navigationItem.rightBarButtonItem = botao;
+        self.navigationItem.title = @"Novo Contato";
+    }
+    
+    return self;
+}
+
+-(void) adiciona {
     Contato *contato = [Contato new];
     
     //[contato setNome:self.nome.text];
@@ -27,7 +39,8 @@
     NSString *telefone = [self.telefone text];
     NSString *site = [self.site text];*/
     
-    NSLog(@"Dados do contato %@ %@ %@ %@ %@", contato.nome, contato.endereco, contato.email, contato.telefone, contato.site);
+    NSLog(@"%@", contato);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

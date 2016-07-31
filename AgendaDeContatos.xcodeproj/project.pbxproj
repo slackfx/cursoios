@@ -17,6 +17,7 @@
 		1D2071611D4D514800C07751 /* AgendaDeContatosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D2071601D4D514800C07751 /* AgendaDeContatosTests.m */; };
 		1D20716C1D4D514800C07751 /* AgendaDeContatosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20716B1D4D514800C07751 /* AgendaDeContatosUITests.m */; };
 		1D20717B1D4D66D800C07751 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20717A1D4D66D800C07751 /* Contato.m */; };
+		1DC212AC1D4D703800AC7958 /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC212AB1D4D703800AC7958 /* ListaContatosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		1D20716D1D4D514800C07751 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D2071791D4D66D800C07751 /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
 		1D20717A1D4D66D800C07751 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
+		1DC212AA1D4D703700AC7958 /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
+		1DC212AB1D4D703800AC7958 /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				1D2071471D4D514800C07751 /* AppDelegate.m */,
 				1D2071491D4D514800C07751 /* ViewController.h */,
 				1D20714A1D4D514800C07751 /* ViewController.m */,
+				1DC212AA1D4D703700AC7958 /* ListaContatosViewController.h */,
+				1DC212AB1D4D703800AC7958 /* ListaContatosViewController.m */,
 				1D2071791D4D66D800C07751 /* Contato.h */,
 				1D20717A1D4D66D800C07751 /* Contato.m */,
 				1D20714C1D4D514800C07751 /* Main.storyboard */,
@@ -215,6 +220,7 @@
 				TargetAttributes = {
 					1D20713F1D4D514800C07751 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 745LB7G4WM;
 					};
 					1D20715B1D4D514800C07751 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -279,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D20717B1D4D66D800C07751 /* Contato.m in Sources */,
+				1DC212AC1D4D703800AC7958 /* ListaContatosViewController.m in Sources */,
 				1D20714B1D4D514800C07751 /* ViewController.m in Sources */,
 				1D2071511D4D514800C07751 /* AgendaDeContatos.xcdatamodeld in Sources */,
 				1D2071481D4D514800C07751 /* AppDelegate.m in Sources */,
@@ -423,10 +430,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AgendaDeContatos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.slackfx.AgendaDeContatos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -435,10 +445,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AgendaDeContatos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.slackfx.AgendaDeContatos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -508,6 +521,7 @@
 				1D2071721D4D514800C07751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D2071731D4D514800C07751 /* Build configuration list for PBXNativeTarget "AgendaDeContatosTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +530,7 @@
 				1D2071751D4D514800C07751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D2071761D4D514800C07751 /* Build configuration list for PBXNativeTarget "AgendaDeContatosUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +539,7 @@
 				1D2071781D4D514800C07751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
