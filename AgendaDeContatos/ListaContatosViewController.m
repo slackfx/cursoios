@@ -8,7 +8,6 @@
 
 #import "ListaContatosViewController.h"
 #import "ViewController.h"
-#import "Contato.h"
 
 @implementation ListaContatosViewController
 
@@ -19,7 +18,7 @@
     UIBarButtonItem * botaoForm = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeFormulario)];
     self.navigationItem.rightBarButtonItem = botaoForm;
     self.navigationItem.title = @"Contatos";
-    self.contatos = [NSMutableArray new];
+    self.contatoDAO = [ContatoDAO contatoDAOInstance];
     
     return self;
 }
@@ -27,12 +26,12 @@
 -(void) exibeFormulario {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     ViewController *form = [storyboard instantiateViewControllerWithIdentifier:@"Form-Contato"];
-    form.contatos = self.contatos;
+    //form.contatoDAO = self.contatoDAO;
     [self.navigationController pushViewController:form animated:YES];
 }
 
 -(NSInteger) tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.contatos.count;
+    return [self.contatoDAO total];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -43,7 +42,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identificador];
     }
 
-    Contato *contato = self.contatos[indexPath.row];
+    Contato *contato = [self.contatoDAO contatoDoIndice: indexPath.row];
     cell.textLabel.text = contato.nome;
     return cell;
 }

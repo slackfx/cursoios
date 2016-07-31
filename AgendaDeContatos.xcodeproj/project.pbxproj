@@ -18,6 +18,7 @@
 		1D20716C1D4D514800C07751 /* AgendaDeContatosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20716B1D4D514800C07751 /* AgendaDeContatosUITests.m */; };
 		1D20717B1D4D66D800C07751 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D20717A1D4D66D800C07751 /* Contato.m */; };
 		1DC212AC1D4D703800AC7958 /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC212AB1D4D703800AC7958 /* ListaContatosViewController.m */; };
+		1DC212AF1D4E2F5D00AC7958 /* ContatoDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC212AE1D4E2F5D00AC7958 /* ContatoDAO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		1D20717A1D4D66D800C07751 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
 		1DC212AA1D4D703700AC7958 /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
 		1DC212AB1D4D703800AC7958 /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
+		1DC212AD1D4E2F5D00AC7958 /* ContatoDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContatoDAO.h; sourceTree = "<group>"; };
+		1DC212AE1D4E2F5D00AC7958 /* ContatoDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContatoDAO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				1D2071791D4D66D800C07751 /* Contato.h */,
 				1D20717A1D4D66D800C07751 /* Contato.m */,
 				1D20714C1D4D514800C07751 /* Main.storyboard */,
+				1DC212AD1D4E2F5D00AC7958 /* ContatoDAO.h */,
+				1DC212AE1D4E2F5D00AC7958 /* ContatoDAO.m */,
 				1D2071521D4D514800C07751 /* Assets.xcassets */,
 				1D2071541D4D514800C07751 /* LaunchScreen.storyboard */,
 				1D2071571D4D514800C07751 /* Info.plist */,
@@ -288,6 +293,7 @@
 				1DC212AC1D4D703800AC7958 /* ListaContatosViewController.m in Sources */,
 				1D20714B1D4D514800C07751 /* ViewController.m in Sources */,
 				1D2071511D4D514800C07751 /* AgendaDeContatos.xcdatamodeld in Sources */,
+				1DC212AF1D4E2F5D00AC7958 /* ContatoDAO.m in Sources */,
 				1D2071481D4D514800C07751 /* AppDelegate.m in Sources */,
 				1D2071451D4D514800C07751 /* main.m in Sources */,
 			);

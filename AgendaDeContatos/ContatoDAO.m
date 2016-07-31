@@ -10,4 +10,33 @@
 
 @implementation ContatoDAO
 
+static ContatoDAO *defaultDAO = nil;
+
+-(id) init {
+    self = [super init];
+    if (self) {
+        self.contatos = [NSMutableArray new];
+    }
+    return self;
+}
+
++(ContatoDAO *) contatoDAOInstance {
+    if (!defaultDAO) {
+        defaultDAO = [ContatoDAO new];
+    }
+    return defaultDAO;
+}
+
+-(void) adicionaContato:(Contato *)contato {
+    [self.contatos addObject:contato];
+}
+
+-(NSInteger) total {
+    return self.contatos.count;
+}
+
+-(Contato *) contatoDoIndice: (NSInteger) indice {
+    return self.contatos[indice];
+}
+
 @end
