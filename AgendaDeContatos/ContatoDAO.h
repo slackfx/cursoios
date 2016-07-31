@@ -23,4 +23,6 @@
 
 -(void) removeContato: (Contato *) contato;
 
+-(NSInteger) indiceDoContato: (Contato *) contato;
+
 @end
