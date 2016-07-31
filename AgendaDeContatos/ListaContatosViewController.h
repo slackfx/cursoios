@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "ContatoDAO.h"
 #import "Contato.h"
+#import "ViewController.h"
 
-@interface ListaContatosViewController : UITableViewController
+@interface ListaContatosViewController : UITableViewController<ViewControllerDelegate>
 
 @property ContatoDAO *contatoDAO;
 @property Contato *contatoSelecionado;
+
+@property NSInteger linhaSelecionada;
 
 @end

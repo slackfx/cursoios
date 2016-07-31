@@ -47,16 +47,18 @@
     [self pegaDadosDoFormulario];
     
     [self.contatoDAO adicionaContato:self.contato];
-
-    NSLog(@"%@", self.contatoDAO.contatos);
+    
     [self.navigationController popViewControllerAnimated:YES];
+    
+    [self.delegate contatoAdicionado: self.contato];
 }
 
 -(void) altera {
     [self pegaDadosDoFormulario];
 
-    NSLog(@"alterando o contato %@", self.contato);
     [self.navigationController popViewControllerAnimated:YES];
+    
+    [self.delegate contatoAtualizado: self.contato];
 }
 
 -(void) pegaDadosDoFormulario {
