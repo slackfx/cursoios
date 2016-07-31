@@ -21,4 +21,6 @@
 
 +(ContatoDAO *) contatoDAOInstance;
 
+-(void) removeContato: (Contato *) contato;
+
 @end

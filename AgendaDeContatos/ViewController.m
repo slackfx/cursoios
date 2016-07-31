@@ -15,29 +15,56 @@
     self = [super initWithCoder:aDecoder];
     
     if(self) {
-        UIBarButtonItem *botao = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action:@selector(adiciona)];
-        self.navigationItem.rightBarButtonItem = botao;
-        self.navigationItem.title = @"Novo Contato";
         self.contatoDAO = [ContatoDAO contatoDAOInstance];
     }
     
     return self;
 }
 
+-(void) viewDidLoad {
+    [super viewDidLoad];
+    UIBarButtonItem *botao = nil;
+    if (self.contato) {
+        botao = [[UIBarButtonItem alloc] initWithTitle:@"Alterar" style:UIBarButtonItemStylePlain target:self action:@selector(altera)];
+        self.navigationItem.title = @"Editar Contato";
+    } else {
+        botao = [[UIBarButtonItem alloc] initWithTitle:@"Adicionar" style:UIBarButtonItemStylePlain target:self action:@selector(adiciona)];
+        self.navigationItem.title = @"Novo Contato";
+    }
+    self.navigationItem.rightBarButtonItem = botao;
+    if (self.contato) {
+        self.nome.text = self.contato.nome;
+        self.endereco.text = self.contato.endereco;
+        self.email.text = self.contato.email;
+        self.telefone.text = self.contato.telefone;
+        self.site.text = self.contato.site;
+    }
+}
+
 -(void) adiciona {
-    Contato *contato = [Contato new];
+    self.contato = [Contato new];
     
-    //[contato setNome:self.nome.text];
-    contato.nome = self.nome.text;
-    contato.endereco = self.endereco.text;
-    contato.email = self.email.text;
-    contato.telefone = self.telefone.text;
-    contato.site = self.site.text;
+    [self pegaDadosDoFormulario];
     
-    [self.contatoDAO adicionaContato:contato];
+    [self.contatoDAO adicionaContato:self.contato];
 
     NSLog(@"%@", self.contatoDAO.contatos);
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void) altera {
+    [self pegaDadosDoFormulario];
+
+    NSLog(@"alterando o contato %@", self.contato);
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void) pegaDadosDoFormulario {
+    self.contato.nome = self.nome.text;
+    self.contato.endereco = self.endereco.text;
+    self.contato.email = self.email.text;
+    self.contato.telefone = self.telefone.text;
+    self.contato.site = self.site.text;
 }
 
 @end

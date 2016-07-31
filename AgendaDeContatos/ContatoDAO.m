@@ -39,4 +39,8 @@ static ContatoDAO *defaultDAO = nil;
     return self.contatos[indice];
 }
 
+- (void)removeContato:(Contato *)contato {
+    [self.contatos removeObject:contato];
+}
+
 @end
